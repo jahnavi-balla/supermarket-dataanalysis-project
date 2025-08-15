@@ -21,3 +21,13 @@ Features:
 -- Instantly view updated insights by simply refreshing the dashboard after adding new data
 
 This solution is ideal for creating a real-time sales data pipeline — from data entry to business intelligence.
+
+Reqirements
+--Python Libraries:
+   streamlit
+   pandas
+   mysql-connector-python
+   sqlalchemy
+    
+
+
