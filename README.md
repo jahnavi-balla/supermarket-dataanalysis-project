@@ -20,6 +20,8 @@ Features:
 
 -- Instantly view updated insights by simply refreshing the dashboard after adding new data
 
+-- ETL(Extract, Transform, Load) and data pipelining used for feasibility and efficiency
+
 This solution is ideal for creating a real-time sales data pipeline — from data entry to business intelligence.
 
 Reqirements
