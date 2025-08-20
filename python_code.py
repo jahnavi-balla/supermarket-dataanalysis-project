@@ -4,7 +4,7 @@ import mysql.connector
 from sqlalchemy import create_engine
 from datetime import datetime
 
-# ---------- DB Connection ----------
+#DB Connection
 @st.cache_resource
 def connect_to_db():
     try:
@@ -21,7 +21,7 @@ def connect_to_db():
         st.error(f"Database connection failed: {e}")
         return None, None
 
-# ---------- Helpers ----------
+
 def generate_invoice_id(engine):
     today_str = datetime.now().strftime("%Y%m%d")
     prefix = f"INV-{today_str}"
@@ -47,7 +47,7 @@ def reset_for_next_customer(engine):
     st.session_state.invoice_submitted = False
     st.rerun()
 
-# ---------- UI ----------
+
 def sales_form(engine):
     # Initialize state
     if "invoice_id" not in st.session_state:
@@ -145,7 +145,7 @@ def sales_form(engine):
             if st.button("🆕 Record Next Customer"):
                 reset_for_next_customer(engine)
 
-# ---------- Main ----------
+
 def main():
     conn, engine = connect_to_db()
     if not conn:
@@ -154,3 +154,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
